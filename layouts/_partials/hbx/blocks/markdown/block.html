@@ -1,0 +1,45 @@
+{{ $content := .wcBlock.content }}
+{{ $page := .wcPage }}
+<div class="portfolio-section">
+  <div class="section-heading">
+    {{ with $content.label }}<p class="section-label">{{ . }}</p>{{ end }}
+    {{ with $content.title }}<h2>{{ . }}</h2>{{ end }}
+    {{ with $content.subtitle }}<p class="section-subtitle">{{ . }}</p>{{ end }}
+  </div>
+  {{ with $content.cards }}
+  <div class="portfolio-grid">
+    {{ range . }}
+    <article class="portfolio-card">
+      {{ with .label }}<p class="card-label">{{ . }}</p>{{ end }}
+      <h3>{{ .title }}</h3>
+      <div class="prose prose-slate card-copy">{{ $page.RenderString (dict "display" "block") .text }}</div>
+      {{ with .tags }}<ul class="tech-tags" aria-label="Technologies">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+      {{ with .links }}<div class="card-links">{{ range . }}<a href="{{ .url | safeURL }}" target="_blank" rel="noopener noreferrer">{{ .label }} <span aria-hidden="true">↗</span></a>{{ end }}</div>{{ end }}
+    </article>
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ with $content.certificates }}
+  <div class="portfolio-grid certificate-grid">
+    {{ range . }}
+    {{ $original := resources.Get .image }}
+    {{ if not $original }}{{ errorf "Missing certificate image: %s" .image }}{{ end }}
+    {{ $thumbnail := $original.Resize "800x webp q80" }}
+    <article class="certificate-card">
+      <a class="certificate-image" href="{{ $original.RelPermalink }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ .title }} certificate (opens in a new tab)">
+        <img src="{{ $thumbnail.RelPermalink }}" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" alt="{{ .alt }}" loading="lazy" decoding="async">
+      </a>
+      <div class="certificate-details">
+        <p class="card-label">{{ .issuer }}</p>
+        <h3>{{ .title }}</h3>
+        <p class="certificate-date">{{ .date }}</p>
+        <a class="certificate-link" href="{{ $original.RelPermalink }}" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ with $content.text }}
+  <div class="prose prose-slate {{ if $content.featured }}research-panel{{ else if $content.certificates }}contact-note{{ end }}">{{ $page.RenderString . }}</div>
+  {{ end }}
+</div>

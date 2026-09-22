@@ -1,0 +1,23 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Md Tanzimul Islam Refat
+  given: Tanzimul
+  family: Islam Refat
+role: Machine learning · Reliable systems
+bio: I’m a Machine Learning Intern at FlyRank AI and a Computing and Information Systems
+  undergraduate at Daffodil International University. My research explores federated
+  learning and cross-system anomaly detection. As Research & Development Secretary
+  at AIRIS, I help lead collaborative AI research. I also build web applications and
+  cloud deployment pipelines.
+links:
+- icon: at-symbol
+  url: mailto:mdtanzimulislamrefat@gmail.com
+  label: Email
+- icon: brands/github
+  url: https://github.com/tanzimul3islam
+  label: GitHub
+- icon: brands/linkedin
+  url: https://www.linkedin.com/in/mdtanzimulislamrefat/
+  label: LinkedIn

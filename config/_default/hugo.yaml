@@ -1,0 +1,45 @@
+title: Md Tanzimul Islam Refat
+baseURL: https://tanzimul3islam.github.io/
+defaultContentLanguage: en
+hasCJKLanguage: false
+defaultContentLanguageInSubdir: false
+removePathAccents: true
+build:
+  writeStats: true
+enableGitInfo: false
+summaryLength: 30
+pagination:
+  pagerSize: 10
+enableEmoji: true
+enableRobotsTXT: true
+footnotereturnlinkcontents: <sup>^</sup>
+ignoreFiles:
+- .ipynb_checkpoints$
+- \.Rmd$
+- \.Rmarkdown$
+- _cache$
+disableAliases: true
+outputs:
+  home:
+  - HTML
+  section:
+  - HTML
+imaging:
+  resampleFilter: lanczos
+  quality: 90
+  anchor: smart
+  hint: picture
+timeout: 600000
+taxonomies: {}
+markup:
+  _merge: deep
+  highlight:
+    lineNos: false
+security:
+  _merge: deep
+sitemap:
+  _merge: deep
+disableKinds:
+- taxonomy
+- term
+- RSS

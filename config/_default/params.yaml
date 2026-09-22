@@ -1,0 +1,46 @@
+hugoblox:
+  schema: '2.0'
+  identity:
+    name: Tanzimul
+    type: person
+    description: "Md Tanzimul Islam Refat \u2014 undergraduate exploring machine learning\
+      \ for reliable systems. Research in federated learning and microservice anomaly\
+      \ detection."
+  theme:
+    mode: light
+    pack: default
+    colors:
+      primary: '#245b51'
+  typography:
+    pack: system
+  layout:
+    radius: sm
+    spacing: comfortable
+    avatar_shape: rounded
+  header:
+    enable: true
+    style: navbar
+    sticky: false
+    align: right
+    search: false
+    theme_toggle: false
+    theme_picker: false
+    language_switcher: false
+  footer:
+    style: minimal
+    language_switcher: false
+  copyright:
+    notice: "\xA9 {year} Md Tanzimul Islam Refat"
+  content:
+    math:
+      enable: true
+    toc:
+      enable: false
+    reading_time:
+      enable: false
+  search:
+    enable: false
+  comments:
+    enable: false
+  repository:
+    enable: false

@@ -1,0 +1,13 @@
+{{ $author := hugo.Data.authors.me }}
+{{ $photo := resources.Get "media/authors/me.jpg" }}
+<div class="profile-intro">
+  <div class="profile-copy">
+    <p class="eyebrow">ML ENGINEERING &amp; RESEARCH</p>
+    <h1>{{ $author.name.display }}</h1>
+    <p class="intro-bio">{{ $author.bio }}</p>
+    <nav class="profile-links" aria-label="Contact and profiles">
+      {{ range $author.links }}<a href="{{ .url | safeURL }}">{{ .label }} <span aria-hidden="true">↗</span></a>{{ end }}
+    </nav>
+  </div>
+  <img class="profile-photo" src="{{ $photo.RelPermalink }}" width="220" height="270" alt="Portrait of Md Tanzimul Islam Refat" fetchpriority="high">
+</div>

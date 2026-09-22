@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TR monogram">
+  <rect width="64" height="64" rx="14" fill="#245b51"/>
+  <path fill="#f8faf8" d="M9 18h23v7h-8v22h-7V25H9z"/>
+  <path fill="#f8faf8" fill-rule="evenodd" d="M35 18h12l8 6v10l-6 4 7 9h-9l-5-8v8h-7zm7 7v7h4l2-2v-3l-2-2z"/>
+</svg>

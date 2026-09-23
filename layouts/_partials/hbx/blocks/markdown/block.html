@@ -33,7 +33,10 @@
         <p class="card-label">{{ .issuer }}</p>
         <h3>{{ .title }}</h3>
         <p class="certificate-date">{{ .date }}</p>
+        <div class="certificate-links">
         <a class="certificate-link" href="{{ $original.RelPermalink }}" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a>
+        {{ with .verify_url }}<a class="certificate-link" href="{{ . | safeURL }}" target="_blank" rel="noopener noreferrer">Verify certificate <span aria-hidden="true">↗</span></a>{{ end }}
+        </div>
       </div>
     </article>
     {{ end }}

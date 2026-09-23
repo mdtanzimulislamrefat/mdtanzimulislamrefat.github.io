@@ -76,6 +76,12 @@ sections:
       title: Certificates & recognition
       label: '04 / Learning & contribution'
       certificates:
+        - title: CS50’s Introduction to Programming with Python
+          issuer: Harvard University · CS50
+          date: Completed 2026
+          image: certificates/cs50p.png
+          alt: CS50 certificate awarded to Md. Tanzimul Islam Refat for completing Introduction to Programming with Python, including nine problem sets and one final project, in 2026.
+          verify_url: https://cs50.harvard.edu/certificates/cf395fbf-2e8c-45fe-991f-625fc145fcfc
         - title: Intro to Machine Learning
           issuer: Kaggle
           date: Completed September 19, 2026

@@ -1,0 +1,54 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-paginated]').forEach((grid, index) => {
+    const items = Array.from(grid.children);
+    const pageSize = Number(grid.dataset.pageSize);
+    if (!Number.isInteger(pageSize) || pageSize < 1 || items.length <= pageSize) return;
+    const pageCount = Math.ceil(items.length / pageSize);
+    let currentPage = 1;
+    grid.id ||= `portfolio-grid-${index + 1}`;
+    const nav = document.createElement('nav');
+    nav.className = 'portfolio-pagination';
+    nav.setAttribute('aria-label', `${grid.dataset.paginationLabel} pagination`);
+    const controls = document.createElement('div');
+    controls.className = 'pagination-controls';
+    const status = document.createElement('p');
+    status.className = 'pagination-status';
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
+    status.setAttribute('aria-atomic', 'true');
+    function button(text, label, getPage) {
+      const control = document.createElement('button');
+      control.type = 'button';
+      control.textContent = text;
+      control.setAttribute('aria-label', label);
+      control.setAttribute('aria-controls', grid.id);
+      control.addEventListener('click', () => render(getPage(), true));
+      controls.append(control);
+      return control;
+    }
+    const previous = button('Previous', 'Previous certificate page', () => currentPage - 1);
+    const pages = Array.from({ length: pageCount }, (_, i) =>
+      button(String(i + 1), `Certificate page ${i + 1}`, () => i + 1));
+    const next = button('Next', 'Next certificate page', () => currentPage + 1);
+    function render(page, interacted = false) {
+      currentPage = Math.max(1, Math.min(pageCount, page));
+      const start = (currentPage - 1) * pageSize;
+      items.forEach((item, i) => { item.hidden = i < start || i >= start + pageSize; });
+      previous.disabled = currentPage === 1;
+      next.disabled = currentPage === pageCount;
+      pages.forEach((control, i) => {
+        if (i + 1 === currentPage) control.setAttribute('aria-current', 'page');
+        else control.removeAttribute('aria-current');
+      });
+      status.textContent = `Page ${currentPage} of ${pageCount} · ${start + 1}–${Math.min(start + pageSize, items.length)} of ${items.length} certificates`;
+      if (interacted && document.activeElement.disabled) {
+        pages[currentPage - 1].focus({ preventScroll: true });
+      }
+    }
+    nav.append(controls, status);
+    grid.after(nav);
+    render(1);
+  });
+});
+</script>

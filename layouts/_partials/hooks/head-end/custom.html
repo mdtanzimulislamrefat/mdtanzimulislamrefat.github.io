@@ -33,6 +33,14 @@ body { background: #f8faf8; color: #1e302a; }
 .certificate-date { color: #66796d; font-size: .8rem; margin: 0 0 19px; }
 .certificate-links { display: flex; flex-wrap: wrap; gap: 4px 16px; }
 .certificate-link { display: inline-flex; gap: 8px; align-items: center; min-height: 36px; font-size: .85rem; font-weight: 600; }
+[data-paginated] > [hidden] { display: none !important; }
+.portfolio-pagination { margin-top: 24px; text-align: center; }
+.pagination-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.pagination-controls button { min-width: 44px; min-height: 44px; padding: 8px 12px; border: 1px solid #cbd8ce; border-radius: 6px; background: #fff; color: #245b51; font: 500 .85rem/1.4 system-ui,sans-serif; cursor: pointer; }
+.pagination-controls button:hover:not(:disabled) { background: #eef3ee; }
+.pagination-controls button[aria-current="page"] { background: #245b51; border-color: #245b51; color: #fff; }
+.pagination-controls button:disabled { opacity: .45; cursor: default; }
+.pagination-status { margin: 10px 0 0; color: #65756c; font-size: .8rem; }
 .contact-note { padding: 24px 0 0; }
 .profile-intro { max-width: 920px; margin: 0 auto; padding: 76px 24px 62px; display: grid; grid-template-columns: 1fr 200px; gap: 56px; align-items: center; }
 .eyebrow { color: #245b51; font-size: .7rem; font-weight: 650; letter-spacing: .15em; margin-bottom: 18px; }

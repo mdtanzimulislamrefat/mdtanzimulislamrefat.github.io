@@ -20,7 +20,7 @@
   </div>
   {{ end }}
   {{ with $content.certificates }}
-  <div class="portfolio-grid certificate-grid">
+  <div class="portfolio-grid certificate-grid" data-paginated data-page-size="2" data-pagination-label="Certificates">
     {{ range . }}
     {{ $original := resources.Get .image }}
     {{ if not $original }}{{ errorf "Missing certificate image: %s" .image }}{{ end }}

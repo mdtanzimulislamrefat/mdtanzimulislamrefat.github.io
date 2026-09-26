@@ -25,16 +25,19 @@
     {{ $original := resources.Get .image }}
     {{ if not $original }}{{ errorf "Missing certificate image: %s" .image }}{{ end }}
     {{ $thumbnail := $original.Resize "800x webp q80" }}
+    {{ $certificateURL := $original.RelPermalink }}
+    {{ with .pdf_url }}{{ $certificateURL = . | relURL }}{{ end }}
     <article class="certificate-card">
-      <a class="certificate-image" href="{{ $original.RelPermalink }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ .title }} certificate (opens in a new tab)">
+      <a class="certificate-image" href="{{ $certificateURL }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ .title }} certificate (opens in a new tab)">
         <img src="{{ $thumbnail.RelPermalink }}" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" alt="{{ .alt }}" loading="lazy" decoding="async">
       </a>
       <div class="certificate-details">
         <p class="card-label">{{ .issuer }}</p>
         <h3>{{ .title }}</h3>
         <p class="certificate-date">{{ .date }}</p>
+        {{ with .credential_id }}<p class="certificate-date">Credential ID: {{ . }}</p>{{ end }}
         <div class="certificate-links">
-        <a class="certificate-link" href="{{ $original.RelPermalink }}" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a>
+        <a class="certificate-link" href="{{ $certificateURL }}" target="_blank" rel="noopener noreferrer">View certificate{{ if .pdf_url }} (PDF){{ end }} <span aria-hidden="true">↗</span></a>
         {{ with .verify_url }}<a class="certificate-link" href="{{ . | safeURL }}" target="_blank" rel="noopener noreferrer">Verify certificate <span aria-hidden="true">↗</span></a>{{ end }}
         </div>
       </div>

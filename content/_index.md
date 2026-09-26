@@ -54,8 +54,8 @@ sections:
         - title: Experience
           text: |
             **Machine Learning Intern · FlyRank AI**  
-            June 2026–present · Remote  
-            Working on machine learning development and research.
+            July–September 2026 · Remote · Completed\
+            Completed a machine learning internship focused on development and research.
 
             **Research & Development Secretary · AIRIS, DIU**  
             February 2025–present  
@@ -79,6 +79,14 @@ sections:
       title: Certificates & recognition
       label: '04 / Learning & contribution'
       certificates:
+        - title: Machine Learning Internship
+          issuer: FlyRank AI
+          date: Completed September 1, 2026 · Issued September 26, 2026
+          image: certificates/flyrank-internship.png
+          pdf_url: /uploads/flyrank-certificate.pdf
+          alt: FlyRank AI certificate awarded to Md Tanzimul Islam Refat for completing the Machine Learning Internship Program from July 1 to September 1, 2026.
+          verify_url: https://internship.flyrank.ai/verify
+          credential_id: FR-D11-F3243-A3952
         - title: CS50’s Introduction to Programming with Python
           issuer: Harvard University · CS50
           date: Completed 2026

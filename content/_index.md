@@ -25,7 +25,7 @@ sections:
   - block: markdown
     id: projects
     content:
-      title: Selected projects
+      title: Projects
       label: '02 / Engineering'
       subtitle: Products and infrastructure I’ve built.
       cards:
@@ -64,12 +64,15 @@ sections:
             **Career Ambassador · DIU Career Development Center**  
             May 2025–May 2026  
             Supported campus career events and student engagement.
-        - title: Education & toolkit
+        - title: Education
           text: |
-            **B.Sc. in Computing and Information Systems**  
-            Daffodil International University · 2023–2027 (expected)
+            **B.Sc. in Computing and Information Systems**\
+            Daffodil International University · 2023–2027 (expected)\
+            Current CGPA: **3.50 / 4.00** (up to 7th semester)
 
-            My engineering toolkit includes React, Next.js, Node.js, PostgreSQL, Docker, GitHub Actions, AWS, and Linux.
+            **Higher Secondary Certificate (HSC) · Science**\
+            Lions School and College · Saidpur, Nilphamari · 2021–2022\
+            GPA: **5.00 / 5.00**
   - block: markdown
     id: certificates
     content:
@@ -92,6 +95,18 @@ sections:
           date: Awarded May 17, 2026
           image: certificates/cdc-ambassador.png
           alt: DIU Career Development Center certificate of achievement recognizing Md Tanzimul Islam Refat’s service as a Career Ambassador during 2025, awarded May 17, 2026.
+  - block: markdown
+    id: problem-solving
+    content:
+      title: Problem solving
+      label: '05 / Coding practice'
+      featured: true
       text: |
-        Based in Dhaka, Bangladesh. [Get in touch →](mailto:mdtanzimulislamrefat@gmail.com)
+        <span class="status-label">90 problems solved</span>
+
+        ### LeetCode
+
+        I practice problem solving on LeetCode, with **90 problems solved**.
+
+        [View my LeetCode profile ↗](https://leetcode.com/u/md_tanzimul/)
 ---

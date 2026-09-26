@@ -27,26 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
       controls.append(control);
       return control;
     }
-    const previous = button('Previous', 'Previous certificate page', () => currentPage - 1);
-    const pages = Array.from({ length: pageCount }, (_, i) =>
-      button(String(i + 1), `Certificate page ${i + 1}`, () => i + 1));
-    const next = button('Next', 'Next certificate page', () => currentPage + 1);
+    const previous = button('← Previous', 'Previous certificate page', () => currentPage - 1);
+    controls.append(status);
+    const next = button('Next →', 'Next certificate page', () => currentPage + 1);
     function render(page, interacted = false) {
       currentPage = Math.max(1, Math.min(pageCount, page));
       const start = (currentPage - 1) * pageSize;
       items.forEach((item, i) => { item.hidden = i < start || i >= start + pageSize; });
       previous.disabled = currentPage === 1;
       next.disabled = currentPage === pageCount;
-      pages.forEach((control, i) => {
-        if (i + 1 === currentPage) control.setAttribute('aria-current', 'page');
-        else control.removeAttribute('aria-current');
-      });
-      status.textContent = `Page ${currentPage} of ${pageCount} · ${start + 1}–${Math.min(start + pageSize, items.length)} of ${items.length} certificates`;
-      if (interacted && document.activeElement.disabled) {
-        pages[currentPage - 1].focus({ preventScroll: true });
+      status.textContent = `Page ${currentPage} of ${pageCount}`;
+      if (interacted && (document.activeElement === previous || document.activeElement === next) && document.activeElement.disabled) {
+        (previous.disabled ? next : previous).focus({ preventScroll: true });
       }
     }
-    nav.append(controls, status);
+    nav.append(controls);
     grid.after(nav);
     render(1);
   });

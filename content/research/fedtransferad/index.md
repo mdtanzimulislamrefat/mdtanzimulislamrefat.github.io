@@ -14,8 +14,6 @@ profile: false
 
 Submitted to the [14th International Conference on Electrical and Computer Engineering](https://icece.org.bd/2026/), BUET, Dhaka. This is a submitted manuscript; acceptance and publication are not yet confirmed.
 
-[Read the submitted manuscript (PDF) →]({{< relref "/" >}}uploads/FedTransferAD_ICECE2026.pdf)
-
 ## Research question
 
 Can a lightweight federated anomaly detector transfer to a microservice application that never participates in classifier training, even when raw metric names and service counts differ?

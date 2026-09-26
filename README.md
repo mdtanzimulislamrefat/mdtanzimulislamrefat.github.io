@@ -19,7 +19,7 @@ Build with `pnpm build`. Generated files are in `public/`.
 - `data/authors/me.yaml`: name, bio, and contact links
 - `content/research/fedtransferad/index.md`: submitted paper summary
 - `assets/media/authors/me.jpg`: supplied portrait, unchanged
-- `static/uploads/`: supplied CV and submitted manuscript
+- `static/uploads/`: supplied CV and certificate assets
 - `config/_default/params.yaml`: appearance
 
 FedTransferAD is explicitly described as submitted, not accepted or published. The anonymized manuscript does not provide an author list, so none is invented. Results are reported from the supplied manuscript, not independently reproduced.

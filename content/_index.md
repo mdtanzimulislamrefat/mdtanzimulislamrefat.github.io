@@ -87,6 +87,12 @@ sections:
           alt: FlyRank AI certificate awarded to Md Tanzimul Islam Refat for completing the Machine Learning Internship Program from July 1 to September 1, 2026.
           verify_url: https://internship.flyrank.ai/verify
           credential_id: FR-D11-F3243-A3952
+        - title: ICPC Online Preliminary Contest · Honorable Mention
+          issuer: International Collegiate Programming Contest
+          date: October 3–November 9, 2024
+          image: certificates/icpc-honorable-mention.png
+          pdf_url: /uploads/icpc.pdf
+          alt: ICPC Certificate of Achievement awarded to Md Tanzimul Islam Refat of Daffodil International University for an Honorable Mention in the Online Preliminary Contest, October 3–November 9, 2024.
         - title: CS50’s Introduction to Programming with Python
           issuer: Harvard University · CS50
           date: Completed 2026

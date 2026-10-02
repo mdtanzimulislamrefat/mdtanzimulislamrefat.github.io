@@ -109,18 +109,4 @@ sections:
           date: Awarded May 17, 2026
           image: certificates/cdc-ambassador.png
           alt: DIU Career Development Center certificate of achievement recognizing Md Tanzimul Islam Refat’s service as a Career Ambassador during 2025, awarded May 17, 2026.
-  - block: markdown
-    id: problem-solving
-    content:
-      title: Problem solving
-      label: '05 / Coding practice'
-      featured: true
-      text: |
-        <span class="status-label">90 problems solved</span>
-
-        ### LeetCode
-
-        I practice problem solving on LeetCode, with **90 problems solved**.
-
-        [View my LeetCode profile ↗](https://leetcode.com/u/md_tanzimul/)
 ---

@@ -8,9 +8,6 @@ main:
 - name: About
   url: /#about
   weight: 30
-- name: Problem solving
-  url: /#problem-solving
-  weight: 35
 - name: CV ↗
   url: uploads/resume.pdf
   weight: 40

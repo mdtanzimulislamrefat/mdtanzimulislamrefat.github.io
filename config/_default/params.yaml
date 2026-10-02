@@ -10,7 +10,7 @@ hugoblox:
     mode: light
     pack: default
     colors:
-      primary: '#245b51'
+      primary: '#1f4e79'
   typography:
     pack: system
   layout:

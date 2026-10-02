@@ -5,6 +5,9 @@ main:
 - name: Projects
   url: /#projects
   weight: 20
+- name: Skills
+  url: /#skills
+  weight: 25
 - name: About
   url: /#about
   weight: 30

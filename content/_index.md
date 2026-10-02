@@ -46,10 +46,25 @@ sections:
             - label: View code
               url: https://github.com/tanzimul3islam/aurfia
   - block: markdown
+    id: skills
+    content:
+      title: Skills
+      label: '03 / Toolkit'
+      subtitle: What I work with across research and engineering.
+      skills:
+        - group: ML & Research
+          items: [Machine learning, Federated learning, Anomaly detection, Time-series / telemetry analysis]
+        - group: Languages
+          items: [Python, JavaScript / TypeScript, SQL]
+        - group: Web
+          items: [Next.js, Node.js, PostgreSQL, Drizzle ORM, Stripe]
+        - group: Cloud & DevOps
+          items: [Docker, Kubernetes, FluxCD, GitHub Actions, AWS]
+  - block: markdown
     id: about
     content:
       title: Background
-      label: '03 / Experience & education'
+      label: '04 / Experience & education'
       cards:
         - title: Experience
           text: |
@@ -77,7 +92,7 @@ sections:
     id: certificates
     content:
       title: Certificates & recognition
-      label: '04 / Learning & contribution'
+      label: '05 / Learning & contribution'
       certificates:
         - title: Machine Learning Internship
           issuer: FlyRank AI

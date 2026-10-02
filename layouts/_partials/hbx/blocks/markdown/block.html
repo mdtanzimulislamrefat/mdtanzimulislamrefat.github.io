@@ -19,6 +19,16 @@
     {{ end }}
   </div>
   {{ end }}
+  {{ with $content.skills }}
+  <dl class="skills-panel">
+    {{ range . }}
+    <div class="skills-row">
+      <dt>{{ .group }}</dt>
+      <dd>{{ range .items }}<span>{{ . }}</span>{{ end }}</dd>
+    </div>
+    {{ end }}
+  </dl>
+  {{ end }}
   {{ with $content.certificates }}
   <div class="portfolio-grid certificate-grid" data-paginated data-page-size="2" data-pagination-label="Certificates">
     {{ range . }}

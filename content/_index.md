@@ -83,7 +83,7 @@ sections:
           text: |
             **B.Sc. in Computing and Information Systems**\
             Daffodil International University · 2023–2027 (expected)\
-            Current CGPA: **3.50 / 4.00** (up to 7th semester)
+            Current CGPA: **3.82 / 4.00** (up to 8th semester)
 
             **Higher Secondary Certificate (HSC) · Science**\
             Lions School and College · Saidpur, Nilphamari · 2021–2022\
